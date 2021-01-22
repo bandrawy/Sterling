@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark row">
+    <div class="col-md-8 px-0" data-aos="fade-right" data-aos-duration="1000">
+      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+    </div>
+    <div class="col-md-4 px-0 imgBlog" data-aos="fade-left" data-aos-duration="1000">
+      <img class="img-fluid" src="../../assets/img/blog.jpg" />
+    </div>
+  </div>
+  <h1>Our Latest Blogs</h1>
+  <div class="container newTable">
+    <p-table [value]="news" [paginator]="true" [rows]="5" [showCurrentPageReport]="true">
+
+      <ng-template pTemplate="body" let-new>
+        <tr>
+          <div class="row">
+            <div class="col-md-7 mb-3">
+              <h3>{{new.title}}</h3>
+              <p>{{new.data}}</p>
+            </div>
+            <div class="col-md-5 mb-3">
+              <img class="img-fluid" src="{{new.img}}" />
+            </div>
+          </div>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+</div>
